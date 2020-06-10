@@ -252,7 +252,7 @@ Resources:
           PolicyDocument:
             Version: 2012-10-17
             Statement:
-              - Resource: !Sub arn:aws:iam::672346384212:role/UdacityFlaskDeployCBKubectlRole
+              - Resource: !Sub arn:aws:iam::${AWS::AccountId}:role/${KubectlRoleName}
                 Effect: Allow
                 Action:
                   - sts:AssumeRole
